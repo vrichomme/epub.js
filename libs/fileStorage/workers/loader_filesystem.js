@@ -2,8 +2,8 @@
 
 var _requestFileSystem  = self.requestFileSystem || self.webkitRequestFileSystem;
 
-const DBSIZE = 5*1024*1024;
-const DBTYPE = TEMPORARY;
+var DBSIZE = 5*1024*1024;
+var DBTYPE = TEMPORARY;
 
 
 
