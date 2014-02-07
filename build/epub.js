@@ -2720,6 +2720,9 @@ EPUBJS.core.request = function(url, type, withCredentials) {
 				
 				if(type == 'xml'){
 					r = this.responseXML;
+					//-- IE10 works when loading container.xml but then responseXml is null
+					if( ! r || r.childNodes.length === 0 )
+						r = (new DOMParser()).parseFromString( this.responseText, "application/xml" );
 				}else
 				if(type == 'json'){
 					r = JSON.parse(this.response);
