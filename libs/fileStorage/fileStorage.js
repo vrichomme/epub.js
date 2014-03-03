@@ -339,8 +339,8 @@ fileStorage.store.filesystem = function() {
 		_requestFileSystem  = window.requestFileSystem || window.webkitRequestFileSystem,
 		_fs;
 
-	const DBSIZE = 5*1024*1024;
-	const DBTYPE = TEMPORARY;
+	var DBSIZE = 5*1024*1024;
+	var DBTYPE = TEMPORARY;
 
 
 
@@ -544,7 +544,7 @@ fileStorage.store.indexeddb = function() {
 		_db,
 		_URL = window.URL;
 
-	const DBNAME = "fileStorage_db";
+	var DBNAME = "fileStorage_db";
 
 	//-- max of 6 concurrent requests: http://www.browserscope.org/?category=network
 	function loader(msg, postMessage){
@@ -988,11 +988,11 @@ fileStorage.store.websql = function() {
 		_db,
 		_URL = window.URL || window.webkitURL;
 
-	const DBNAME = "fileStoragejs_db";
-	const DBVERSION = "1";
-	const DBDESC = "cache for files";
-	const DBSIZE =  5 * 1024 * 1024;
-	const TABLENAME = "files";
+	var DBNAME = "fileStoragejs_db";
+	var DBVERSION = "1";
+	var DBDESC = "cache for files";
+	var DBSIZE =  5 * 1024 * 1024;
+	var TABLENAME = "files";
 	
 	function loader(msg, postMessage){
 		var e = {"data":null},

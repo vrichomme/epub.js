@@ -344,6 +344,7 @@ EPUBJS.reader.ControlsController = function(book) {
 		screenfull.toggle($('#container')[0]);
 	});
 	
+	/*
 	document.addEventListener(screenfull.raw.fullscreenchange, function() {
 			fullscreen = screenfull.isFullscreen;
 			if(fullscreen) {
@@ -356,7 +357,7 @@ EPUBJS.reader.ControlsController = function(book) {
 					.removeClass("icon-resize-small");
 			}
 	});
-	
+	*/
 	
 	$settings.on("click", function() {
 		reader.SettingsController.show();
